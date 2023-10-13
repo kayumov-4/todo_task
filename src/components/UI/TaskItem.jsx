@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import useTodoApi from "../../service/useTodoApi";
 import second from "../../assets/icons/delete.png";
 import { DataContext } from "../../context/dataContext";
-const TaskItem = ({ state: { title, isFinished, id } }, setBtn, btn) => {
+const TaskItem = ({ state: { title, isFinished, id, priority } }) => {
   const [check, setCheck] = useState(isFinished);
   const {
     todayTasks,
@@ -46,7 +46,13 @@ const TaskItem = ({ state: { title, isFinished, id } }, setBtn, btn) => {
           name=""
           id=""
         />
-        <p className={`${check && "line-through text-[#64748b]"}`}>{title}</p>
+        <p
+          className={`${check && "line-through text-[#64748b]"} ${
+            priority == "high" && "text-red-500"
+          }`}
+        >
+          {title}
+        </p>
       </div>
       <button onClick={deleteFunc}>
         <img className="w-[24px] h-[24px]" src={second} alt="" />

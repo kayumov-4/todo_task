@@ -5,7 +5,6 @@ import useTodoApi from "./service/useTodoApi";
 import { DataContext } from "./context/dataContext";
 const App = () => {
   const [input, setInput] = useState("");
-  const [btn, setBtn] = useState(false);
   const {
     todayTasks,
     setTodayTasks,
@@ -75,7 +74,7 @@ const App = () => {
   };
   useEffect(() => {
     fetchAllTasks();
-  }, [btn]);
+  }, []);
   return (
     <div className=" bg-white border-4 w-[1240px] mx-auto h-fit pb-5 mb-10 mt-16 rounded-2xl ">
       <div className=" container px-5 mx-auto">
@@ -98,14 +97,7 @@ const App = () => {
             <ul className="list-none flex flex-col gap-1">
               {todayTasks.length > 0 ? (
                 todayTasks.map((todo, index) => {
-                  return (
-                    <TaskItem
-                      btn={btn}
-                      setBtn={setBtn}
-                      state={todo}
-                      key={index}
-                    />
-                  );
+                  return <TaskItem state={todo} key={index} />;
                 })
               ) : (
                 <h1 className="text-[16px] text-white">Hozircha bo'sh</h1>

@@ -15,7 +15,7 @@
     {
       "id": 1697186753689,
       "title": "Assalomu alaykum",
-      "isFinished": false,
+      "isFinished": true,
       "priority": "low",
       "category": "today"
     },
@@ -25,20 +25,6 @@
       "isFinished": true,
       "priority": "low",
       "category": "tomorrow"
-    },
-    {
-      "id": 1697186873058,
-      "title": "asd",
-      "isFinished": false,
-      "priority": "low",
-      "category": "today"
-    },
-    {
-      "id": 1697187004600,
-      "title": "Assalomu alaykum",
-      "isFinished": false,
-      "priority": "low",
-      "category": "today"
     },
     {
       "id": 1697187016777,
@@ -60,6 +46,48 @@
       "isFinished": false,
       "priority": "low",
       "category": "others"
+    },
+    {
+      "id": 1697199862459,
+      "title": "uy ishi !muhum",
+      "isFinished": false,
+      "priority": "low",
+      "category": "today"
+    },
+    {
+      "id": 1697199904293,
+      "title": "asd",
+      "isFinished": false,
+      "priority": "low",
+      "category": "today"
+    },
+    {
+      "id": 1697199961858,
+      "title": " juda !muhim",
+      "isFinished": false,
+      "priority": "high",
+      "category": "today"
+    },
+    {
+      "id": 1697199970813,
+      "title": " ish muhim",
+      "isFinished": false,
+      "priority": "low",
+      "category": "tomorrow"
+    },
+    {
+      "id": 1697199978834,
+      "title": " ish !muhim",
+      "isFinished": false,
+      "priority": "high",
+      "category": "today"
+    },
+    {
+      "id": 1697199989747,
+      "title": " ish !muhim",
+      "isFinished": false,
+      "priority": "high",
+      "category": "today"
     }
   ]
 }
