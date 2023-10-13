@@ -1,27 +1,6 @@
 {
   "todos": [
     {
-      "id": 11241,
-      "title": "json-server",
-      "priority": "low",
-      "isFinished": false,
-      "category": "today"
-    },
-    {
-      "id": 11221,
-      "title": "json-server",
-      "priority": "low",
-      "isFinished": false,
-      "category": "tomorrow"
-    },
-    {
-      "id": 11141,
-      "title": "json-server",
-      "priority": "low",
-      "isFinished": false,
-      "category": "others"
-    },
-    {
       "id": 1697182461354,
       "title": "nmadur",
       "isFinished": false,
@@ -34,53 +13,53 @@
       "priority": "low"
     },
     {
-      "id": 1697182578197,
-      "title": "nmadur",
+      "id": 1697186753689,
+      "title": "Assalomu alaykum",
       "isFinished": false,
       "priority": "low",
       "category": "today"
     },
     {
-      "id": 1697182585359,
-      "title": "nmagadur ",
-      "isFinished": false,
-      "priority": "low",
-      "category": "today"
-    },
-    {
-      "id": 1697182591241,
-      "title": "nmagadur ",
-      "isFinished": false,
+      "id": 1697186766153,
+      "title": " ish",
+      "isFinished": true,
       "priority": "low",
       "category": "tomorrow"
     },
     {
-      "id": 1697182597984,
-      "title": "charcahdim boru",
+      "id": 1697186873058,
+      "title": "asd",
       "isFinished": false,
       "priority": "low",
       "category": "today"
     },
     {
-      "id": 1697182609123,
-      "title": " charcahdim boru",
+      "id": 1697187004600,
+      "title": "Assalomu alaykum",
+      "isFinished": false,
+      "priority": "low",
+      "category": "today"
+    },
+    {
+      "id": 1697187016777,
+      "title": "da",
       "isFinished": false,
       "priority": "low",
       "category": "others"
     },
     {
-      "id": 1697182613327,
-      "title": " charcahdim boru",
+      "id": 1697187018939,
+      "title": "da",
       "isFinished": false,
       "priority": "low",
       "category": "others"
     },
     {
-      "id": 1697182621619,
-      "title": " charcahdim  boru",
+      "id": 1697187020012,
+      "title": "da",
       "isFinished": false,
       "priority": "low",
-      "category": "tomorrow"
+      "category": "others"
     }
   ]
 }

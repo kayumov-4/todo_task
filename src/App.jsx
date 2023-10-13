@@ -1,35 +1,20 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Input, Button } from "@material-tailwind/react";
 import TaskItem from "./components/UI/TaskItem";
 import useTodoApi from "./service/useTodoApi";
-
+import { DataContext } from "./context/dataContext";
 const App = () => {
   const [input, setInput] = useState("");
-  const [todayTasks, setTodayTasks] = useState([]);
-  const [tomorrowTasks, setTomorrowTasks] = useState([]);
-  const [othersTasks, setOtherTasks] = useState([]);
-
-  const getTodayTasks = () => {
-    useTodoApi.getAll().then((res) => {
-      const fetchedToday = res.data.filter((el) => el.category == "today");
-      setTodayTasks(fetchedToday);
-    });
-  };
-  const getTomorrowTasks = () => {
-    useTodoApi.getAll().then((res) => {
-      const fetchedTomorrow = res.data.filter(
-        (el) => el.category == "tomorrow"
-      );
-      setTomorrowTasks(fetchedTomorrow);
-    });
-  };
-  const getOtherTasks = () => {
-    useTodoApi.getAll().then((res) => {
-      const fetchedOthers = res.data.filter((el) => el.category == "others");
-      setOtherTasks(fetchedOthers);
-    });
-  };
-
+  const [btn, setBtn] = useState(false);
+  const {
+    todayTasks,
+    setTodayTasks,
+    tomorrowTasks,
+    setTomorrowTasks,
+    othersTasks,
+    setOtherTasks,
+    fetchAllTasks,
+  } = useContext(DataContext);
   const addTodoFunc = () => {
     if (input.trim().length > 0) {
       const regexExp = new RegExp(
@@ -89,13 +74,8 @@ const App = () => {
     }
   };
   useEffect(() => {
-    getTodayTasks();
-    getTomorrowTasks();
-    getOtherTasks();
-    console.log(todayTasks);
-    console.log(tomorrowTasks);
-    console.log(othersTasks);
-  }, []);
+    fetchAllTasks();
+  }, [btn]);
   return (
     <div className=" bg-white border-4 w-[1240px] mx-auto h-fit pb-5 mb-10 mt-16 rounded-2xl ">
       <div className=" container px-5 mx-auto">
@@ -118,7 +98,14 @@ const App = () => {
             <ul className="list-none flex flex-col gap-1">
               {todayTasks.length > 0 ? (
                 todayTasks.map((todo, index) => {
-                  return <TaskItem state={todo} key={index} />;
+                  return (
+                    <TaskItem
+                      btn={btn}
+                      setBtn={setBtn}
+                      state={todo}
+                      key={index}
+                    />
+                  );
                 })
               ) : (
                 <h1 className="text-[16px] text-white">Hozircha bo'sh</h1>
